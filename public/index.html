@@ -21,11 +21,16 @@
                         console.log('perdimos  al servidor');
                     }
                 });
-                            socket.emit('mensaje',{nombre:'felipe'});
-                            socket.on('mensaje',function(payload)
+                 socket.emit('mensaje',{nombre:'felipe'});
+                socket.on('nuevo-mensaje',function(payload)
                             {
                                 console.log('escuchando',payload);
-                            })
+                            }) 
+
+                            socket.on('bandas-activas',function(bands)
+                            {   console.clear();
+                                console.table(bands);
+                            });
         </script>
 </body>
 </html>

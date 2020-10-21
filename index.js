@@ -8,8 +8,6 @@ require('dotenv').config();
  //app de express 
  const app = express();
 
-
-
 // Node Server
 const server = require('http').createServer(app);
 module.exports.io = require('socket.io')(server);
